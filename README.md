@@ -5,6 +5,7 @@ This is designed to work with a vacuum bed, vacuum pump, solenoid valve(normally
 * Provide different units
 * Run long test runs, possible timing bug, but can't confirm
 * Improve gcode commands, come up with better control system
+* Add vacuum level watchdog
 # Configure  "printer.cfg"
 add the module name
 ``` bash 
@@ -17,6 +18,7 @@ maximum_vac:27 #vacuum pump stops when it reaches maximum desired vacuum level
 ```
 # Built-in Gcode commands
 Starts the vacuum system. Maintains vacuum level based on desired levels.
+Note: There is no watchdog yet, it won't raise any printer error if your system can't reach to desired level in x amount of time. Be careful, always test your system first for air leak.
 ``` bash 
     ENABLE_VAC
 ```
@@ -27,6 +29,7 @@ Stops the vacuum system. If tank is used or hose line has vacuum in it, then thi
 ```
 
 Turn ons the solenoid without turning on the pump. Fills the system with air.
+IMPORTANT:You need to execute DISABLE_VAC after system is filled with air.
 ``` bash 
     EMPTY_TANK
 ```
