@@ -1,5 +1,5 @@
 # Vacuum Bed For Klipper
-This is designed to work with a vacuum bed, vacuum pump, vacuum transmitter and vacuum tank(not a must but nice to have). It works but still in development.
+This is designed to work with a vacuum bed, vacuum pump, vacuum transmitter and vacuum tank(not a must but nice to have). Still in development but usable.
 ### TODO
 * Add mode change function to handle different sensors and vacuum ranges. So far this is hard coded for generic vacuum sensor with 1-5V output, 0 to - 14.7psig range.
 * Provide different units
