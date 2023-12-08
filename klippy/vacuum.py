@@ -20,8 +20,8 @@ class vacuum:
         self.motor_pin = config.get('vacuum_pump_pin')
         self.valve_pin = config.get('valve_pin')
         self.sensor_pin = config.get('sensor_pin')
-        self.minimum_vacuum = config.getint('minimum_vac')
-        self.maximum_vacuum = config.getint('maximum_vac')
+        self.minimum_vacuum = config.getfloat('minimum_vac')
+        self.maximum_vacuum = config.getfloat('maximum_vac')
         self.vacuum_level = -1
         self.is_system_activate = False
         self.is_system_running = False
